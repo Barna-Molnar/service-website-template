@@ -28,7 +28,7 @@ export default function About(props: AboutProps) {
                 <h3 className="text-sm font-semibold text-muted-foreground mb-3">KEY CREDENTIALS</h3>
                 <div className="flex flex-wrap gap-2">
                   {config.about.credentials.map((credential, index) => (
-                    <Badge key={index} variant={credential.variant || "secondary"} className="px-3 py-1">
+                    <Badge key={index} variant="secondary" className="px-3 py-1">
                       {credential.text}
                     </Badge>
                   ))}
@@ -42,8 +42,8 @@ export default function About(props: AboutProps) {
                     <div className="text-sm text-muted-foreground mt-1">Years Experience</div>
                   </div>
                   <div className="border-l border-border pl-4">
-                    <div className="text-4xl font-bold text-primary" data-testid="text-clients-protected">{config.about.stats.clientsServed}</div>
-                    <div className="text-sm text-muted-foreground mt-1">Clients Protected</div>
+                    <div className="text-4xl font-bold text-primary" data-testid="text-clients-served">{config.about.stats.clientsServed}</div>
+                    <div className="text-sm text-muted-foreground mt-1">Clients Served</div>
                   </div>
                 </div>
               </Card>
@@ -58,6 +58,7 @@ export default function About(props: AboutProps) {
               loading="lazy"
               width="600"
               height="400"
+              decoding="async"
             />
           </div>
         </div>

@@ -62,16 +62,16 @@ export default function TermsOfService() {
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <p>
-                                We provide professional security and protection services including:
+                                We provide professional software development services including:
                             </p>
                             <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-4">
-                                <li>Close and executive protection</li>
-                                <li>Risk assessment and security consulting</li>
-                                <li>Asset and property protection</li>
-                                <li>Event and residential security</li>
+                                <li>Custom application development</li>
+                                <li>Software consulting and architecture</li>
+                                <li>Cloud infrastructure and DevOps</li>
+                                <li>Mobile and web application development</li>
                             </ul>
                             <p>
-                                All personnel are licensed and operate under UK security regulations.
+                                All developers follow industry best practices and maintain professional development standards.
                             </p>
                         </CardContent>
                     </Card>
@@ -105,7 +105,7 @@ export default function TermsOfService() {
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <p>
-                                While we maintain high professional standards, no security service can guarantee complete protection. 
+                                While we maintain high professional standards, we cannot guarantee 100% uptime or bug-free software. 
                                 We are not responsible for events beyond reasonable control. Liability is limited as permitted by law.
                             </p>
                         </CardContent>

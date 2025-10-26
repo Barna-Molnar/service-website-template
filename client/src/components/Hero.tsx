@@ -17,6 +17,7 @@ export default function Hero(props: HeroProps) {
                 style={{ backgroundImage: `url(${config.hero.backgroundImage})` }}
                 role="img"
                 aria-label={config.hero.ariaLabel}
+                aria-hidden="true"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/85 to-background/90" />
 

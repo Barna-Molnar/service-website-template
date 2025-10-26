@@ -1,7 +1,7 @@
 import { SiteConfig } from "./types";
 import { Code, Smartphone, Monitor, Database, Settings, Users } from "lucide-react";
-import heroImage from "@assets/stock_images/corporate_security_m_e607b3e0.jpg";
-import aboutImage from "@assets/stock_images/professional_securit_717af2d8.jpg";
+import heroImage from "@assets/stock_images/corporate_security_m_e607b3e0.webp";
+import aboutImage from "@assets/stock_images/professional_securit_717af2d8.webp";
 
 // DreamBig Kft - Software Development Services
 export const config = {
@@ -13,42 +13,42 @@ export const config = {
   },
   
   colors: {
-    // Soft neutral with colorful accents
-    primary: "220 14% 50%",              // Soft gray-blue for buttons - not too dominant
+    // Balanced with soft blue-gray tones
+    primary: "220 45% 42%",              // Soft blue-gray that works well
     primaryForeground: "0 0% 100%",
-    secondary: "220 12% 28%",             // Darker neutral
+    secondary: "220 30% 28%",             // Medium neutral
     secondaryForeground: "0 0% 98%",
     background: {
-      light: "220 15% 98%",               // Light neutral gray
-      dark: "220 20% 11%"                 // Deep neutral gray
+      light: "220 15% 99%",               // Very light background
+      dark: "220 25% 8%"                  // Deep dark for better contrast
     },
     foreground: {
-      light: "220 22% 18%",               // Dark neutral
-      dark: "220 10% 96%"                 // Almost white
+      light: "220 35% 10%",               // Much darker text for better readability
+      dark: "220 15% 98%"                  // Almost pure white for contrast
     },
     border: {
-      light: "220 13% 88%",               // Light gray
-      dark: "220 18% 28%"                 // Medium gray
+      light: "220 25% 80%",               // More visible border
+      dark: "220 25% 35%"                 // Lighter border on dark
     },
     card: {
-      light: "220 12% 99%",               // Almost white
-      dark: "220 25% 14%"                 // Dark gray
+      light: "220 8% 100%",              // Pure white cards for max contrast
+      dark: "220 30% 12%"                 // Dark card for contrast
     },
     cardForeground: {
-      light: "220 25% 15%",
-      dark: "220 10% 97%"
+      light: "220 35% 10%",               // Very dark text for max readability
+      dark: "220 10% 98%"                 // Very light text
     },
     cardBorder: {
-      light: "220 13% 92%",               // Subtle border
-      dark: "220 20% 22%"
+      light: "220 18% 85%",               // Clear card border
+      dark: "220 28% 28%"                 // Card border
     },
     muted: {
-      light: "220 12% 94%",               // Very light gray
-      dark: "220 18% 20%"                 // Muted gray
+      light: "220 22% 90%",               // Noticeable section background for good contrast
+      dark: "220 22% 18%"                 // Muted background
     },
     mutedForeground: {
-      light: "220 12% 45%",               // Medium gray
-      dark: "220 10% 70%"                 // Muted text
+      light: "220 20% 40%",               // Readable muted text
+      dark: "220 10% 75%"                 // Muted text
     },
     // Accent colors for icons
     accent1: "210 100% 56%",             // Bright blue
@@ -79,20 +79,23 @@ export const config = {
   about: {
     title: "About DreamBig Kft",
     paragraphs: [
-      "DreamBig Kft specializes in delivering professional software development services to businesses worldwide. With extensive experience in modern technologies and agile methodologies, we transform your ideas into robust, scalable software solutions.",
-      "Based in Győr, Hungary, but serving clients globally, our team brings expertise in web and mobile application development, cloud infrastructure, and software consulting. We're committed to quality, efficiency, and innovation in every project.",
-      "Our approach combines cutting-edge technology with proven methodologies, ensuring your software not only meets current requirements but is designed to evolve with your business needs."
+      "DreamBig Kft specializes in delivering professional software development services to businesses worldwide. With over 20 years of experience in modern technologies and agile methodologies, we transform your ideas into robust, scalable software solutions.",
+      "Based in Győr, Hungary, but serving clients globally, our team brings decades of expertise in web and mobile application development, cloud infrastructure, and software consulting. We're committed to quality, efficiency, and innovation in every project.",
+      "Our approach combines cutting-edge technology with proven methodologies from years of industry experience, ensuring your software not only meets current requirements but is designed to evolve with your business needs."
     ],
     credentials: [
-      { text: "Agile Certified" },
-      { text: "Cloud Expert" },
+      { text: "20+ Years Experience" },
+      { text: "Enterprise Solutions" },
       { text: "Full Stack Development" },
+      { text: "Cloud & DevOps" },
+      { text: "Agile Certified" },
       { text: "Mobile Applications" },
-      { text: "DevOps Certified" }
+      { text: "API & Integration" },
+      { text: "Quality Assurance" }
     ],
     stats: {
-      yearsExperience: "10+",
-      clientsServed: "100+"
+      yearsExperience: "20+",
+      clientsServed: "200+"
     },
     image: aboutImage,
     imageAlt: "Professional software development team collaborating on innovative solutions"
