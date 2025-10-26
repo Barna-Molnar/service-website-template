@@ -48,7 +48,7 @@ export default function PrivacyPolicy() {
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <p>
-                                Adam Roszkop Security (“we”, “our”, or “us”) respects your privacy
+                                DreamBig Kft ("we", "our", or "us") respects your privacy
                                 and is committed to protecting the personal information you share
                                 with us. This policy explains how we handle any information
                                 collected through our website.
@@ -68,7 +68,7 @@ export default function PrivacyPolicy() {
                             <p>We only collect personal information that you choose to provide, such as when you:</p>
                             <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-4">
                                 <li>Contact us by email or through our contact form</li>
-                                <li>Request information about our close protection or risk assessment services</li>
+                                <li>Request information about our services</li>
                             </ul>
                             <p>
                                 This information may include your name, contact details, and any message
@@ -167,14 +167,14 @@ export default function PrivacyPolicy() {
                                 rights, please contact:
                             </p>
                             <div className="bg-muted/30 p-4 rounded-lg">
-                                <p><strong>Adam Roszkop Security</strong></p>
+                                <p><strong>DreamBig Kft</strong></p>
                                 <p>
                                     Email:{" "}
                                     <a
-                                        href="mailto:privacy@adamroszkopsecurity.co.uk"
+                                        href="mailto:privacy@dreambig.dev"
                                         className="text-primary hover:underline"
                                     >
-                                        privacy@adamroszkopsecurity.co.uk
+                                        privacy@dreambig.dev
                                     </a>
                                 </p>
                             </div>

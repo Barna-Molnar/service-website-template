@@ -53,12 +53,12 @@ All site content is defined in `client/src/config/config.ts`. Edit this file to 
 - Contact information
 - Footer links
 
-**Example**: To change from Security to Transportation industry, just edit the config file!
+**Example**: To change from one industry to another, just edit the config file!
 
 ## 📁 Project Structure
 
 ```
-SafeGuardLondon/
+DreamBig/
 ├── client/
 │   ├── src/
 │   │   ├── components/  # Reusable UI components
@@ -95,41 +95,35 @@ npm run build
 
 ## 💡 Customization Guide
 
-### For New Customers:
+### For New Projects:
 
-1. **Copy the template**
-   ```bash
-   cp -r SafeGuardLondon CustomerBusiness
-   ```
-
-2. **Edit the config**
+1. **Edit the config**
    ```typescript
-   // Edit: CustomerBusiness/client/src/config/config.ts
+   // Edit: client/src/config/config.ts
    // Change business name, colors, services, contact info, etc.
    ```
 
-3. **Replace images**
-   - Add customer images to `attached_assets/stock_images/`
+2. **Replace images**
+   - Add your images to `attached_assets/stock_images/`
    - Update image paths in config
 
-4. **Customize Logo** (IMPORTANT!)
-   - Edit `client/src/components/Logo.tsx`
-   - Change monogram initials (e.g., "AR" to customer initials)
+3. **Customize Logo**
+   - Edit `client/src/components/Logo.tsx` or update `DreamBigLogo.tsx`
+   - Replace the logo SVG with your own brand
    - Update business name text if needed
-   - **Logo customization is client-specific and should be done for each customer**
 
-5. **Update SEO & Meta Tags** (CRITICAL!)
+4. **Update SEO & Meta Tags** (CRITICAL!)
    - **Edit `client/index.html`** - Update all meta tags:
      - Title, description, keywords
      - Open Graph tags (Facebook/LinkedIn)
      - Twitter Card tags
-     - Structured data (JSON-LD) with customer info
+     - Structured data (JSON-LD) with your business info
      - Canonical URL
      - Phone, email, address
    - **Edit `client/public/sitemap.xml`** - Update URLs
    - **Edit `client/public/robots.txt`** - Update sitemap URL
 
-6. **Build and deploy**
+5. **Build and deploy**
    ```bash
    npm install
    npm run build
@@ -138,7 +132,7 @@ npm run build
 
 ## 📞 Example Contact Information
 
-All contact details are in `config.ts`. Customize for each customer:
+All contact details are in `config.ts`. Customize for your business:
 - Phone, email, location
 - Business hours
 - Services offered

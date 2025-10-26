@@ -46,7 +46,7 @@ export default function TermsOfService() {
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <p>
-                                By accessing the Adam Roszkop Security website or engaging our services, you agree to these Terms of Service.
+                                By accessing our website or engaging our services, you agree to these Terms of Service.
                                 If you do not agree, please discontinue use immediately. We may update these Terms periodically.
                             </p>
                         </CardContent>
@@ -178,17 +178,17 @@ export default function TermsOfService() {
                         <CardContent className="space-y-3">
                             <p>For any questions or legal inquiries, please contact:</p>
                             <div className="bg-muted/30 p-4 rounded-lg">
-                                <p><strong>Adam Roszkop Security</strong></p>
+                                <p><strong>DreamBig Kft</strong></p>
                                 <p>
                                     Email:{" "}
                                     <a
-                                        href="mailto:legal@adamroszkopsecurity.co.uk"
+                                        href="mailto:legal@dreambig.dev"
                                         className="text-primary hover:underline"
                                     >
-                                        legal@adamroszkopsecurity.co.uk
+                                        legal@dreambig.dev
                                     </a>
                                 </p>
-                                <p>London, United Kingdom</p>
+                                <p>Győr, Hungary</p>
                             </div>
                         </CardContent>
                     </Card>
