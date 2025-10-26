@@ -1,53 +1,62 @@
 import { SiteConfig } from "./types";
-import { Shield, Lock, UserCheck, Building, Search, Home } from "lucide-react";
+import { Code, Smartphone, Monitor, Database, Settings, Users } from "lucide-react";
 import heroImage from "@assets/stock_images/corporate_security_m_e607b3e0.jpg";
 import aboutImage from "@assets/stock_images/professional_securit_717af2d8.jpg";
 
-export const config: SiteConfig = {
+// DreamBig Kft - Software Development Services
+export const config = {
   meta: {
-    businessName: "Adam Roszkop Security",
-    tagline: "Professional Security Solutions",
-    location: "London, United Kingdom",
-    website: "adamroszkopsecurity.com"
+    businessName: "DreamBig Kft",
+    tagline: "Professional Software Development Services",
+    location: "Győr, Hungary (Worldwide)",
+    website: "dreambig.dev"
   },
   
   colors: {
-    primary: "45 75% 52%",
-    primaryForeground: "220 30% 12%",
-    secondary: "40 18% 90%",
-    secondaryForeground: "220 35% 20%",
+    // Soft neutral with colorful accents
+    primary: "220 14% 50%",              // Soft gray-blue for buttons - not too dominant
+    primaryForeground: "0 0% 100%",
+    secondary: "220 12% 28%",             // Darker neutral
+    secondaryForeground: "0 0% 98%",
     background: {
-      light: "40 25% 97%",
-      dark: "220 45% 10%"
+      light: "220 15% 98%",               // Light neutral gray
+      dark: "220 20% 11%"                 // Deep neutral gray
     },
     foreground: {
-      light: "220 35% 15%",
-      dark: "40 20% 92%"
+      light: "220 22% 18%",               // Dark neutral
+      dark: "220 10% 96%"                 // Almost white
     },
     border: {
-      light: "40 20% 88%",
-      dark: "220 35% 22%"
+      light: "220 13% 88%",               // Light gray
+      dark: "220 18% 28%"                 // Medium gray
     },
     card: {
-      light: "40 22% 95%",
-      dark: "220 40% 14%"
+      light: "220 12% 99%",               // Almost white
+      dark: "220 25% 14%"                 // Dark gray
     },
     cardForeground: {
-      light: "220 35% 15%",
-      dark: "40 20% 92%"
+      light: "220 25% 15%",
+      dark: "220 10% 97%"
     },
     cardBorder: {
-      light: "40 18% 90%",
-      dark: "220 35% 18%"
+      light: "220 13% 92%",               // Subtle border
+      dark: "220 20% 22%"
     },
     muted: {
-      light: "40 20% 92%",
-      dark: "220 32% 20%"
+      light: "220 12% 94%",               // Very light gray
+      dark: "220 18% 20%"                 // Muted gray
     },
     mutedForeground: {
-      light: "220 25% 45%",
-      dark: "40 15% 70%"
-    }
+      light: "220 12% 45%",               // Medium gray
+      dark: "220 10% 70%"                 // Muted text
+    },
+    // Accent colors for icons
+    accent1: "210 100% 56%",             // Bright blue
+    accent2: "340 82% 60%",               // Vibrant pink
+    accent3: "280 95% 60%",               // Purple
+    accent4: "160 84% 45%",               // Teal
+    accent5: "45 95% 58%",                // Amber
+    accent6: "260 89% 65%",               // Indigo
   },
 
   navigation: {
@@ -56,113 +65,113 @@ export const config: SiteConfig = {
       { id: "about", label: "About" },
       { id: "contact", label: "Contact" }
     ],
-    ctaButton: "Get Started"
+    ctaButton: "Start Your Project"
   },
 
   hero: {
-    title: "Professional Security Solutions in London",
-    subtitle: "Elite close protection and asset security services backed by years of experience. Discreet, reliable, and professional protection when you need it most.",
-    ctaButton: "Request Consultation",
+    title: "Custom Software Solutions Built for Your Business",
+    subtitle: "Professional software development services including consulting, custom applications, maintenance, and team training. We deliver scalable solutions that grow with your business.",
+    ctaButton: "Get a Quote",
     backgroundImage: heroImage,
-    ariaLabel: "Professional security personnel providing close protection services in London"
+    ariaLabel: "Professional software development team creating custom business solutions"
   },
 
   about: {
-    title: "About Adam Roszkop Security",
+    title: "About DreamBig Kft",
     paragraphs: [
-      "With years of professional experience in the security industry, Adam Roszkop Security provides elite protection services to clients across London and beyond. Our commitment to discretion, professionalism, and excellence has made us a trusted name in personal and asset protection.",
-      "Based in London, we bring extensive expertise in close protection, executive security, and comprehensive risk management. Every member of our team is highly trained, vetted, and dedicated to maintaining the highest standards of security services.",
-      "Our approach combines traditional security principles with modern technology and threat assessment techniques, ensuring our clients receive the most effective protection available."
+      "DreamBig Kft specializes in delivering professional software development services to businesses worldwide. With extensive experience in modern technologies and agile methodologies, we transform your ideas into robust, scalable software solutions.",
+      "Based in Győr, Hungary, but serving clients globally, our team brings expertise in web and mobile application development, cloud infrastructure, and software consulting. We're committed to quality, efficiency, and innovation in every project.",
+      "Our approach combines cutting-edge technology with proven methodologies, ensuring your software not only meets current requirements but is designed to evolve with your business needs."
     ],
     credentials: [
-      { text: "SIA Licensed" },
-      { text: "First Aid Certified" },
-      { text: "Advanced Driving" },
-      { text: "Risk Assessment" },
-      { text: "Counter Surveillance" }
+      { text: "Agile Certified" },
+      { text: "Cloud Expert" },
+      { text: "Full Stack Development" },
+      { text: "Mobile Applications" },
+      { text: "DevOps Certified" }
     ],
     stats: {
-      yearsExperience: "15+",
-      clientsServed: "500+"
+      yearsExperience: "10+",
+      clientsServed: "100+"
     },
     image: aboutImage,
-    imageAlt: "Professional security team providing executive protection and close protection services in London"
+    imageAlt: "Professional software development team collaborating on innovative solutions"
   },
 
   services: {
-    title: "Security Services",
-    subtitle: "Comprehensive protection solutions tailored to your unique security requirements",
+    title: "Software Development Services",
+    subtitle: "Comprehensive development solutions tailored to your business needs and goals",
     services: [
       {
-        icon: Shield,
-        title: "Close Protection",
-        description: "Elite personal protection services for high-profile individuals, executives, and VIPs. Discreet and professional security tailored to your lifestyle."
+        icon: Code,
+        title: "Custom Application Development",
+        description: "Build tailored web and mobile applications using modern frameworks. From concept to deployment, we create scalable solutions that meet your exact requirements."
       },
       {
-        icon: Lock,
-        title: "Asset Protection",
-        description: "Comprehensive security solutions for valuable assets, property, and business interests. Advanced surveillance and protection protocols."
+        icon: Monitor,
+        title: "Software Consulting",
+        description: "Expert guidance on technology selection, architecture design, and development strategy. We help you make informed decisions for your software projects."
       },
       {
-        icon: UserCheck,
-        title: "Executive Protection",
-        description: "Specialized protection for corporate executives and business leaders. Risk assessment and strategic security planning."
+        icon: Database,
+        title: "Database Solutions",
+        description: "Design, implement, and optimize database systems for performance and scalability. We ensure your data infrastructure supports business growth."
       },
       {
-        icon: Building,
-        title: "Event Security",
-        description: "Professional security management for corporate events, private functions, and special occasions with meticulous attention to detail."
+        icon: Settings,
+        title: "Maintenance & Support",
+        description: "Ongoing maintenance, updates, and support to keep your software running smoothly. We provide continuous improvement and bug fixes."
       },
       {
-        icon: Search,
-        title: "Risk Assessment",
-        description: "Thorough evaluation of security vulnerabilities and comprehensive risk mitigation strategies for individuals and businesses."
+        icon: Users,
+        title: "Team Training",
+        description: "Comprehensive training programs to upskill your development team. Learn modern practices, frameworks, and best practices from experienced professionals."
       },
       {
-        icon: Home,
-        title: "Residential Security",
-        description: "Advanced home security solutions including surveillance systems, access control, and on-site protection services."
+        icon: Smartphone,
+        title: "Mobile Development",
+        description: "Native and cross-platform mobile applications for iOS and Android. We create responsive, feature-rich mobile solutions that engage users."
       }
     ]
   },
 
   contact: {
     title: "Get in Touch",
-    subtitle: "Contact us for a confidential consultation about your security requirements",
+    subtitle: "Let's discuss your software development needs and how we can help",
     contactInfo: {
-      phone: "+44 20 1234 5678",
-      email: "contact@adamroszkopsecurity.com",
-      location: "London, United Kingdom",
+      phone: "+36 30 123 4567",
+      email: "info@dreambig.dev",
+      location: "Győr, Hungary (Worldwide Services)",
       businessHours: {
-        weekdays: "Monday - Friday: 9:00 AM - 6:00 PM",
-        emergency: "Emergency Response: 24/7"
+        weekdays: "Monday - Friday: 9:00 AM - 6:00 PM CET",
+        emergency: "Response Time: Within 24 Hours"
       },
       emergencyResponse: {
-        title: "24/7 Emergency Response",
-        description: "For urgent security matters, contact us immediately. We provide round-the-clock emergency response services with rapid deployment capabilities."
+        title: "Quick Response Time",
+        description: "We understand urgent requirements. Contact us for immediate consultation and rapid project turnaround when you need it most."
       }
     },
     whyChooseUs: {
       title: "Why Choose Us?",
       items: [
         {
-          title: "Licensed & Certified",
-          description: "SIA licensed professionals with advanced certifications"
+          title: "Experienced Team",
+          description: "Skilled developers with years of hands-on experience in modern technologies"
         },
         {
-          title: "Discrete Service",
-          description: "Confidential and professional approach to all operations"
+          title: "Agile Methodology",
+          description: "Flexible development process ensuring rapid delivery and continuous improvement"
         },
         {
-          title: "Rapid Response",
-          description: "Quick deployment and immediate threat assessment"
+          title: "Global Reach",
+          description: "Worldwide service delivery with remote collaboration capabilities"
         }
       ]
     }
   },
 
   footer: {
-    description: "Professional security solutions in London. Discreet, reliable, and experienced.",
+    description: "Professional software development services. Quality, innovation, and reliability.",
     quickLinks: [
       { id: "services", label: "Services" },
       { id: "about", label: "About" },
@@ -172,6 +181,6 @@ export const config: SiteConfig = {
       { label: "Privacy Policy", href: "/privacy-policy" },
       { label: "Terms of Service", href: "/terms-of-service" }
     ],
-    copyright: "Adam Roszkop Security. All rights reserved. Based in London, UK."
+    copyright: "DreamBig Kft. All rights reserved. Based in Győr, Hungary."
   }
 };

@@ -38,6 +38,13 @@ export interface ColorScheme {
     light: string;
     dark: string;
   };
+  // Accent colors for icons and colorful elements
+  accent1: string;
+  accent2: string;
+  accent3: string;
+  accent4: string;
+  accent5: string;
+  accent6: string;
 }
 
 // Service configuration
