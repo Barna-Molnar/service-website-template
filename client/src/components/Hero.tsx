@@ -29,6 +29,7 @@ export default function Hero(props: HeroProps) {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button
+                        variant="outline"
                         size="lg"
                         onClick={() => scrollToSection("contact")}
                         className="text-base btn-hover-modern-light"
