@@ -10,7 +10,7 @@ export default function Logo({ variant = "full", className = "", onClick }: Logo
     return (
         <div className={`flex items-center gap-3 cursor-pointer ${className}`} onClick={onClick}>
             {/* DreamBig Logo */}
-            <DreamBigLogo className="w-8 h-8 text-primary" aria-label="DreamBig Logo" />
+            <DreamBigLogo className="w-8 h-8 text-foreground" aria-label="DreamBig Logo" />
 
             {variant === "full" && (
                 <div className="flex flex-col">

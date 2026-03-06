@@ -1,6 +1,6 @@
 import { SiteConfig } from "./types";
 import { Code, Smartphone, Monitor, Database, Settings, Users } from "lucide-react";
-import heroImage from "@assets/stock_images/corporate_security_m_e607b3e0.webp";
+import heroImage from "@assets/stock_images/it_img.avif";
 import aboutImage from "@assets/stock_images/professional_securit_717af2d8.webp";
 
 // DreamBig Kft - Software Development Services
@@ -13,44 +13,52 @@ export const config = {
   },
   
   colors: {
-    // Balanced with soft blue-gray tones
-    primary: "220 45% 42%",              // Soft blue-gray that works well
+    // Professional color scheme: Neutral base with subtle green accents
+    // Light mode: Clean white/light gray with green accents for contrast
+    // Dark mode: Light neutral gray with subtle green hints (not dark, not too green)
+    primary: "142 52% 45%",              // Forest green accent - professional
     primaryForeground: "0 0% 100%",
-    secondary: "220 30% 28%",             // Medium neutral
-    secondaryForeground: "0 0% 98%",
+    secondary: "0 0% 92%",                // Light neutral gray
+    secondaryForeground: "0 0% 15%",
     background: {
-      light: "220 15% 99%",               // Very light background
-      dark: "220 25% 8%"                  // Deep dark for better contrast
+      light: "0 0% 99%",                  // Almost pure white - clean and bright
+      dark: "0 0% 28%"                    // Light gray (not dark, not green)
     },
     foreground: {
-      light: "220 35% 10%",               // Much darker text for better readability
-      dark: "220 15% 98%"                  // Almost pure white for contrast
+      light: "0 0% 8%",                   // Very dark text - strong contrast
+      dark: "0 0% 95%"                    // Very light text - strong contrast
     },
     border: {
-      light: "220 25% 80%",               // More visible border
-      dark: "220 25% 35%"                 // Lighter border on dark
+      light: "0 0% 88%",                  // Light gray border
+      dark: "0 0% 40%"                    // Medium gray border
     },
     card: {
-      light: "220 8% 100%",              // Pure white cards for max contrast
-      dark: "220 30% 12%"                 // Dark card for contrast
+      light: "0 0% 100%",                 // Pure white cards
+      dark: "0 0% 32%"                    // Slightly lighter gray cards
     },
     cardForeground: {
-      light: "220 35% 10%",               // Very dark text for max readability
-      dark: "220 10% 98%"                 // Very light text
+      light: "0 0% 8%",                   // Very dark text
+      dark: "0 0% 95%"                    // Very light text
     },
     cardBorder: {
-      light: "220 18% 85%",               // Clear card border
-      dark: "220 28% 28%"                 // Card border
+      light: "0 0% 90%",                  // Light gray border
+      dark: "0 0% 38%"                    // Medium gray border
     },
     muted: {
-      light: "220 22% 90%",               // Noticeable section background for good contrast
-      dark: "220 22% 18%"                 // Muted background
+      light: "0 0% 96%",                  // Very light gray section background
+      dark: "0 0% 30%"                    // Slightly lighter gray for muted
     },
     mutedForeground: {
-      light: "220 20% 40%",               // Readable muted text
-      dark: "220 10% 75%"                 // Muted text
+      light: "0 0% 40%",                  // Medium gray for muted text
+      dark: "0 0% 70%"                    // Light gray for muted text
     },
-    // Accent colors for icons
+    // Accent colors for icons - mix of green accents with other professional colors
+    // accent1: "142 52% 45%",               // Forest green
+    // accent2: "142 45% 55%",               // Medium green
+    // accent3: "200 80% 50%",               // Professional blue
+    // accent4: "142 35% 60%",               // Light sage green
+    // accent5: "220 60% 55%",               // Soft blue
+    // accent6: "142 40% 50%"                // Gentle green
     accent1: "210 100% 56%",             // Bright blue
     accent2: "340 82% 60%",               // Vibrant pink
     accent3: "280 95% 60%",               // Purple
