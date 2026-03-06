@@ -39,14 +39,6 @@ export default function Navigation(props: NavigationProps) {
                                 {item.label}
                             </a>
                         ))}
-                        <Button
-                            onClick={() => onNavigationClick('contact')}
-                            size="sm"
-                            className="btn-hover-modern-light"
-                            data-testid="button-cta-nav"
-                        >
-                            {config.navigation.ctaButton}
-                        </Button>
                         <ThemeToggle />
                     </div>
 
@@ -82,13 +74,6 @@ export default function Navigation(props: NavigationProps) {
                                 {item.label}
                             </a>
                         ))}
-                        <Button
-                            onClick={() => onNavigationClick("contact")}
-                            className="w-full mt-2 btn-hover-modern-light"
-                            data-testid="button-cta-nav-mobile"
-                        >
-                            {config.navigation.ctaButton}
-                        </Button>
                         <div className="flex justify-center pt-2">
                             <ThemeToggle />
                         </div>

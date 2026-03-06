@@ -4,58 +4,58 @@
 
 /* LIGHT MODE COLORS*/
 :root {
-  /* Essential colors for light mode */
-  --background: 40 25% 97%;
-  --foreground: 220 35% 15%;
-  --border: 40 20% 88%;
+  /* Essential colors for light mode - Neutral with green accents */
+  --background: 0 0% 99%;
+  --foreground: 0 0% 8%;
+  --border: 0 0% 88%;
   
-  --card: 40 22% 95%;
-  --card-foreground: 220 35% 15%;
-  --card-border: 40 18% 90%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 8%;
+  --card-border: 0 0% 90%;
   
-  --primary: 45 75% 52%;
-  --primary-foreground: 220 30% 12%;
+  --primary: 142 52% 45%;
+  --primary-foreground: 0 0% 100%;
   
-  --secondary: 40 18% 90%;
-  --secondary-foreground: 220 35% 20%;
+  --secondary: 0 0% 92%;
+  --secondary-foreground: 0 0% 15%;
   
-  --muted: 40 20% 92%;
-  --muted-foreground: 220 25% 45%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 40%;
 
   /* Font fallback system */
   --font-sans: Inter, DM Sans, Open Sans, sans-serif;
   
   /* Custom shadows for hover effects */
-  --shadow-hover: 0 10px 25px -5px hsl(220 20% 15% / 0.15), 0 4px 6px -2px hsl(220 20% 15% / 0.05);
-  --shadow-hover-light: 0 10px 25px -5px hsl(220 20% 15% / 0.15), 0 4px 6px -2px hsl(220 20% 15% / 0.05);
-  --shadow-card-hover: 0 20px 40px -10px hsl(220 20% 15% / 0.20), 0 8px 16px -4px hsl(220 20% 15% / 0.10);
-  --shadow-card-hover-light: 0 20px 40px -10px hsl(220 20% 15% / 0.20), 0 8px 16px -4px hsl(220 20% 15% / 0.10);
+  --shadow-hover: 0 10px 25px -5px hsl(0 0% 15% / 0.15), 0 4px 6px -2px hsl(0 0% 15% / 0.05);
+  --shadow-hover-light: 0 10px 25px -5px hsl(0 0% 15% / 0.15), 0 4px 6px -2px hsl(0 0% 15% / 0.05);
+  --shadow-card-hover: 0 20px 40px -10px hsl(0 0% 15% / 0.20), 0 8px 16px -4px hsl(0 0% 15% / 0.10);
+  --shadow-card-hover-light: 0 20px 40px -10px hsl(0 0% 15% / 0.20), 0 8px 16px -4px hsl(0 0% 15% / 0.10);
 }
 
 /* DARK MODE */
 .dark {
-  /* Essential colors for dark mode */
-  --background: 220 45% 10%;
-  --foreground: 40 20% 92%;
-  --border: 220 35% 22%;
+  /* Essential colors for dark mode - Light neutral gray (not dark, not green) */
+  --background: 0 0% 28%;
+  --foreground: 0 0% 95%;
+  --border: 0 0% 40%;
   
-  --card: 220 40% 14%;
-  --card-foreground: 40 20% 92%;
-  --card-border: 220 35% 18%;
+  --card: 0 0% 32%;
+  --card-foreground: 0 0% 95%;
+  --card-border: 0 0% 38%;
   
-  --primary: 45 80% 58%;
-  --primary-foreground: 220 40% 10%;
+  --primary: 142 52% 45%;
+  --primary-foreground: 0 0% 100%;
   
-  --secondary: 220 30% 22%;
-  --secondary-foreground: 40 20% 88%;
+  --secondary: 0 0% 36%;
+  --secondary-foreground: 0 0% 95%;
   
-  --muted: 220 32% 20%;
-  --muted-foreground: 40 15% 70%;
+  --muted: 0 0% 30%;
+  --muted-foreground: 0 0% 70%;
   
   /* Enhanced shadows for dark mode */
-  --shadow-hover: 0 10px 25px -5px hsl(220 40% 5% / 0.40), 0 4px 6px -2px hsl(220 40% 5% / 0.30);
+  --shadow-hover: 0 10px 25px -5px hsl(0 0% 5% / 0.40), 0 4px 6px -2px hsl(0 0% 5% / 0.30);
   --shadow-hover-light: 0 10px 25px -5px hsl(0 0% 100% / 0.12), 0 4px 6px -2px hsl(0 0% 100% / 0.06);
-  --shadow-card-hover: 0 20px 40px -10px hsl(220 40% 5% / 0.50), 0 8px 16px -4px hsl(220 40% 5% / 0.40);
+  --shadow-card-hover: 0 20px 40px -10px hsl(0 0% 5% / 0.50), 0 8px 16px -4px hsl(0 0% 5% / 0.40);
   --shadow-card-hover-light: 0 20px 40px -10px hsl(0 0% 100% / 0.15), 0 8px 16px -4px hsl(0 0% 100% / 0.08);
 }
 
