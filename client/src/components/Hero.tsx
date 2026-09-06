@@ -21,7 +21,7 @@ export default function Hero(props: HeroProps) {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/85 to-background/90" />
 
-            <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6">
                     {config.hero.title}
                 </h1>
@@ -30,13 +30,13 @@ export default function Hero(props: HeroProps) {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button
-                        variant="outline"
+                        variant="default"
                         size="lg"
-                        onClick={() => scrollToSection("contact")}
-                        className="text-base btn-hover-modern-light"
+                        onClick={() => scrollToSection(config.hero.cta.target as SectionId)}
+                        className="text-base btn-hover-modern"
                         data-testid="button-hero-consultation"
                     >
-                        {config.hero.ctaButton}
+                        {config.hero.cta.label}
                     </Button>
                 </div>
             </div>

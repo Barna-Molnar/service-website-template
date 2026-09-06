@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { config } from "@/config";
+import { config, getIcon } from "@/config";
 
 type ServicesProps = {
     sectionRef: React.RefObject<HTMLDivElement>;
@@ -9,7 +9,7 @@ export default function Services(props: ServicesProps) {
     const { sectionRef } = props;
     return (
         <section id="services" className="py-20 md:py-32" ref={sectionRef}>
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
                         {config.services.title}
@@ -20,10 +20,10 @@ export default function Services(props: ServicesProps) {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
-                    {config.services.services.map((service, index) => {
-                        const IconComponent = service.icon;
-                        // Use accent colors from config
-                        const accentColor = `hsl(${config.colors[`accent${index + 1}` as keyof typeof config.colors]})`;
+                    {config.services.items.map((service, index) => {
+                        const IconComponent = getIcon(service.icon);
+                        const accents = config.theme.colors.accents;
+                        const accentColor = `hsl(${accents[index % accents.length]})`;
                         return (
                             <Card key={index} className="card-hover-modern-light" data-testid={`card-service-${index}`} role="listitem">
                                 <CardHeader>

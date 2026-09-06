@@ -20,7 +20,7 @@ export default function Navigation(props: NavigationProps) {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border" >
-            <div className="max-w-7xl mx-auto px-6" >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex items-center justify-between h-16">
                     <Logo variant="full" onClick={() => onNavigationClick("home")} />
 
@@ -40,14 +40,14 @@ export default function Navigation(props: NavigationProps) {
                             </a>
                         ))}
                         <Button
-                            onClick={() => onNavigationClick('contact')}
+                            onClick={() => onNavigationClick(config.navigation.cta.target as SectionId)}
                             size="sm"
                             className="btn-hover-modern-light"
                             data-testid="button-cta-nav"
                         >
-                            {config.navigation.ctaButton}
+                            {config.navigation.cta.label}
                         </Button>
-                        <ThemeToggle />
+                        {config.features.themeToggle && <ThemeToggle />}
                     </div>
 
                     <Button
@@ -67,7 +67,7 @@ export default function Navigation(props: NavigationProps) {
 
             {mobileMenuOpen && (
                 <div className="md:hidden border-t border-border bg-background">
-                    <div className="px-6 py-4 space-y-2">
+                    <div className="px-4 sm:px-6 py-4 space-y-2">
                         {config.navigation.items.map((item) => (
                             <a
                                 key={item.id}
@@ -83,15 +83,17 @@ export default function Navigation(props: NavigationProps) {
                             </a>
                         ))}
                         <Button
-                            onClick={() => onNavigationClick("contact")}
+                            onClick={() => onNavigationClick(config.navigation.cta.target as SectionId)}
                             className="w-full mt-2 btn-hover-modern-light"
                             data-testid="button-cta-nav-mobile"
                         >
-                            {config.navigation.ctaButton}
+                            {config.navigation.cta.label}
                         </Button>
-                        <div className="flex justify-center pt-2">
-                            <ThemeToggle />
-                        </div>
+                        {config.features.themeToggle && (
+                            <div className="flex justify-center pt-2">
+                                <ThemeToggle />
+                            </div>
+                        )}
                     </div>
                 </div>
             )}

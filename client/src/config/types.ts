@@ -1,124 +1,132 @@
-import { LucideIcon } from "lucide-react";
+export type ThemeMode = "light" | "dark" | "system";
 
-// Color scheme configuration
-export interface ColorScheme {
+export interface LightDarkColor {
+  light: string;
+  dark: string;
+}
+
+export interface BrandConfig {
+  name: string;
+  legalName: string;
+  tagline: string;
+  logo: string;
+  favicon: string;
+  defaultTheme: ThemeMode;
+}
+
+export interface SeoConfig {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
+  locale: string;
+  ogImage: string;
+  robots: string;
+}
+
+export interface ThemeColors {
   primary: string;
   primaryForeground: string;
   secondary: string;
   secondaryForeground: string;
-  background: {
-    light: string;
-    dark: string;
-  };
-  foreground: {
-    light: string;
-    dark: string;
-  };
-  border: {
-    light: string;
-    dark: string;
-  };
-  card: {
-    light: string;
-    dark: string;
-  };
-  cardForeground: {
-    light: string;
-    dark: string;
-  };
-  cardBorder: {
-    light: string;
-    dark: string;
-  };
-  muted: {
-    light: string;
-    dark: string;
-  };
-  mutedForeground: {
-    light: string;
-    dark: string;
-  };
-  // Accent colors for icons and colorful elements
-  accent1: string;
-  accent2: string;
-  accent3: string;
-  accent4: string;
-  accent5: string;
-  accent6: string;
+  background: LightDarkColor;
+  foreground: LightDarkColor;
+  muted: LightDarkColor;
+  mutedForeground: LightDarkColor;
+  card: LightDarkColor;
+  cardForeground: LightDarkColor;
+  cardBorder: LightDarkColor;
+  border: LightDarkColor;
+  accents: string[];
 }
 
-// Service configuration
-export interface Service {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  image?: string;
-}
-
-// Contact information
-export interface ContactInfo {
-  phone: string;
-  email: string;
-  location: string;
-  businessHours: {
-    weekdays: string;
-    emergency: string;
+export interface ThemeConfig {
+  fonts: {
+    sans: string;
+    googleUrl: string;
   };
-  emergencyResponse: {
-    title: string;
-    description: string;
-  };
+  colors: ThemeColors;
 }
 
-// Business credentials/badges
-export interface Credential {
-  text: string;
-  variant?: "secondary" | "outline" | "default";
-}
-
-// Statistics/metrics
-export interface Stats {
-  yearsExperience: string;
-  clientsServed: string;
-}
-
-// Navigation items
 export interface NavItem {
   id: string;
   label: string;
 }
 
-// Hero section configuration
+export interface CtaConfig {
+  label: string;
+  target: string;
+}
+
+export interface NavigationConfig {
+  items: NavItem[];
+  cta: CtaConfig;
+}
+
 export interface HeroConfig {
   title: string;
   subtitle: string;
-  ctaButton: string;
+  cta: CtaConfig;
   backgroundImage: string;
   ariaLabel: string;
 }
 
-// About section configuration
+export interface Credential {
+  text: string;
+}
+
+export interface StatItem {
+  value: string;
+  label: string;
+}
+
 export interface AboutConfig {
+  enabled: boolean;
   title: string;
   paragraphs: string[];
+  credentialsLabel: string;
   credentials: Credential[];
-  stats: Stats;
+  stats: StatItem[];
   image: string;
   imageAlt: string;
 }
 
-// Services section configuration
-export interface ServicesConfig {
+export interface ServiceItem {
+  icon: string;
   title: string;
-  subtitle: string;
-  services: Service[];
+  description: string;
 }
 
-// Contact section configuration
-export interface ContactConfig {
+export interface ServicesConfig {
+  enabled: boolean;
   title: string;
   subtitle: string;
-  contactInfo: ContactInfo;
+  items: ServiceItem[];
+}
+
+export interface ContactAction {
+  type: "phone" | "email";
+  label: string;
+}
+
+export interface ContactHighlight {
+  enabled: boolean;
+  title: string;
+  description: string;
+  ctaLabel: string;
+}
+
+export interface ContactConfig {
+  enabled: boolean;
+  title: string;
+  subtitle: string;
+  phone: string;
+  email: string;
+  location: string;
+  serviceArea: string;
+  hours: string[];
+  actions: ContactAction[];
+  highlight: ContactHighlight;
   whyChooseUs: {
     title: string;
     items: Array<{
@@ -128,33 +136,46 @@ export interface ContactConfig {
   };
 }
 
-// Footer configuration
+export interface LegalSection {
+  title: string;
+  paragraphs: string[];
+  bullets?: string[];
+}
+
+export interface LegalDocument {
+  intro: string;
+  sections: LegalSection[];
+}
+
+export interface LegalConfig {
+  jurisdiction: string;
+  privacyEmail: string;
+  legalEmail: string;
+  lastUpdated: string;
+  privacy: LegalDocument;
+  terms: LegalDocument;
+}
+
 export interface FooterConfig {
   description: string;
-  quickLinks: NavItem[];
-  legalLinks: Array<{
-    label: string;
-    href: string;
-  }>;
   copyright: string;
 }
 
-// Main site configuration
+export interface FeaturesConfig {
+  themeToggle: boolean;
+  contactForm: boolean;
+}
+
 export interface SiteConfig {
-  meta: {
-    businessName: string;
-    tagline: string;
-    location: string;
-    website?: string;
-  };
-  colors: ColorScheme;
-  navigation: {
-    items: NavItem[];
-    ctaButton: string;
-  };
+  brand: BrandConfig;
+  seo: SeoConfig;
+  theme: ThemeConfig;
+  navigation: NavigationConfig;
   hero: HeroConfig;
   about: AboutConfig;
   services: ServicesConfig;
   contact: ContactConfig;
+  legal: LegalConfig;
   footer: FooterConfig;
+  features: FeaturesConfig;
 }

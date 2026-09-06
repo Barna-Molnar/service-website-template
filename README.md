@@ -1,143 +1,59 @@
-# Professional Services Website Template
+# Service Website Template
 
-A modern, responsive template for professional service businesses. Fully configurable - customize colors, content, and branding for any industry.
+A white-label marketing site for small service businesses. Brand, copy, colors, SEO, and legal pages all come from one config file.
 
-## 🚀 Features
+## Customize a new client
 
-- **Fully Configurable** - All content, colors, and branding in one config file
-- **Professional Design** - Clean, trustworthy interface
-- **Responsive Layout** - Works perfectly on desktop, tablet, and mobile
-- **Dark/Light Theme** - Toggle between themes with system preference detection
-- **Direct Contact** - Click-to-call and click-to-email functionality
-- **Modern Stack** - Built with React 18, TypeScript, and Tailwind CSS
-- **Fast Performance** - Static site with optimized loading
+Do these three things:
 
-## 🛠️ Tech Stack
-
-- **Frontend**: React 18 + TypeScript
-- **Styling**: Tailwind CSS + shadcn/ui components
-- **Build Tool**: Vite
-- **Routing**: Wouter
-- **Icons**: Lucide React
-- **State Management**: React Context + LocalStorage for theme persistence
-
-## 📦 Installation
-
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-```
-
-## 🌐 Development
-
-The development server runs on `http://localhost:3000` with hot module replacement.
-
-## ⚙️ Configuration
-
-All site content is defined in `client/src/config/config.ts`. Edit this file to customize:
-- Business name, tagline, location
-- Colors (automatically applied on load)
-- Navigation items
-- Hero section content
-- Services offered
-- About section content
-- Contact information
-- Footer links
-
-**Example**: To change from one industry to another, just edit the config file!
-
-## 📁 Project Structure
-
-```
-DreamBig/
-├── client/
-│   ├── src/
-│   │   ├── components/  # Reusable UI components
-│   │   ├── config/      # Site configuration (ONE file to edit!)
-│   │   ├── pages/       # Page components
-│   │   ├── hooks/       # Custom React hooks (theme, scroll)
-│   │   └── lib/         # Utility functions
-│   └── index.html
-├── attached_assets/     # Images and assets
-└── config files...      # Tailwind, Vite, etc.
-```
-
-## 🚀 Deployment
-
-This is a static React application that can be deployed to any static hosting service:
-
-### Vercel (Recommended)
-```bash
-npm install -g vercel
-vercel --prod
-```
-
-### Netlify
-```bash
-npm run build
-# Upload dist/ folder to Netlify
-```
-
-### GitHub Pages
-```bash
-npm run build
-# Push dist/ to gh-pages branch
-```
-
-## 💡 Customization Guide
-
-### For New Projects:
-
-1. **Edit the config**
-   ```typescript
-   // Edit: client/src/config/config.ts
-   // Change business name, colors, services, contact info, etc.
+1. **Edit the site config**
+   ```text
+   client/src/config/site.config.ts
    ```
+   Change `brand`, `seo`, `theme`, navigation, hero, about, services, contact, legal, and footer.
 
-2. **Replace images**
-   - Add your images to `attached_assets/stock_images/`
-   - Update image paths in config
+2. **Replace the images**
+   - Favicon → `client/public/favicon.svg` (set `brand.favicon` to `/favicon.svg`)
+   - Logo / Open Graph image → `client/public/brand/`
+   - Hero and about photos → `client/public/images/`
+   - Point `brand.logo`, `brand.favicon`, `seo.ogImage`, `hero.backgroundImage`, and `about.image` at those files.
 
-3. **Customize Logo**
-   - Edit `client/src/components/Logo.tsx` or update `DreamBigLogo.tsx`
-   - Replace the logo SVG with your own brand
-   - Update business name text if needed
-
-4. **Update SEO & Meta Tags** (CRITICAL!)
-   - **Edit `client/index.html`** - Update all meta tags:
-     - Title, description, keywords
-     - Open Graph tags (Facebook/LinkedIn)
-     - Twitter Card tags
-     - Structured data (JSON-LD) with your business info
-     - Canonical URL
-     - Phone, email, address
-   - **Edit `client/public/sitemap.xml`** - Update URLs
-   - **Edit `client/public/robots.txt`** - Update sitemap URL
-
-5. **Build and deploy**
+3. **Install and build**
    ```bash
    npm install
    npm run build
-   # Deploy dist/ folder
    ```
+   Deploy the `dist/` folder.
 
-## 📞 Example Contact Information
+That is the full client swap. You do not need to edit HTML, sitemap, robots, or component files.
 
-All contact details are in `config.ts`. Customize for your business:
-- Phone, email, location
-- Business hours
-- Services offered
-- About section content
+## Commands
 
-## 📄 License
+```bash
+npm run dev       # http://localhost:3000
+npm run build     # production output in dist/
+npm run preview   # serve the production build
+npm run check     # TypeScript
+```
 
-MIT License - see LICENSE file for details.
+## What the build generates
+
+From `site.config.ts`, Vite writes:
+
+- SEO tags, Open Graph, Twitter, and JSON-LD into `dist/index.html`
+- `dist/sitemap.xml` from `seo.canonicalUrl` plus navigation and legal routes
+- `dist/robots.txt` pointing at that sitemap
+- Theme CSS variables from `theme.colors`
+
+## Optional flags
+
+In `site.config.ts`:
+
+- `about.enabled` / `services.enabled` / `contact.enabled` — hide a section
+- `contact.highlight.enabled` — hide the highlight card
+- `features.themeToggle` — hide the dark-mode toggle
+- `brand.logo` — leave empty to show a text wordmark
+
+## License
+
+MIT

@@ -1,24 +1,34 @@
-import DreamBigLogo from "./DreamBigLogo";
+import { config } from "@/config";
 
 interface LogoProps {
-    variant?: "full" | "compact";
-    className?: string;
-    onClick?: () => void;
+  variant?: "full" | "compact";
+  className?: string;
+  onClick?: () => void;
 }
 
 export default function Logo({ variant = "full", className = "", onClick }: LogoProps) {
-    return (
-        <div className={`flex items-center gap-3 cursor-pointer ${className}`} onClick={onClick}>
-            {/* DreamBig Logo */}
-            <DreamBigLogo className="w-8 h-8 text-primary" aria-label="DreamBig Logo" />
+  const { name, logo } = config.brand;
+  const hasLogo = logo.trim().length > 0;
+  const showWordmark = variant === "full" || !hasLogo;
 
-            {variant === "full" && (
-                <div className="flex flex-col">
-                    <span className="text-xl font-bold tracking-tight leading-none text-foreground">
-                        DreamBig kft
-                    </span>
-                </div>
-            )}
-        </div>
-    );
+  return (
+    <div
+      className={`flex items-center gap-3 cursor-pointer ${className}`}
+      onClick={onClick}
+      aria-label={name}
+    >
+      {hasLogo && (
+        <img
+          src={logo}
+          alt={name}
+          className="h-8 w-8 object-contain"
+        />
+      )}
+      {showWordmark && (
+        <span className="text-xl font-bold tracking-tight leading-none text-foreground">
+          {name}
+        </span>
+      )}
+    </div>
+  );
 }

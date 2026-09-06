@@ -1,6 +1,8 @@
 import { lazy, Suspense } from "react";
 import { Switch, Route } from "wouter";
 import Home from "@/pages/Home";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { config } from "@/config";
 
 // Lazy load pages that aren't immediately needed
 const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy"));
@@ -38,7 +40,11 @@ function Router() {
 }
 
 function App() {
-  return <Router />;
+  return (
+    <ThemeProvider defaultTheme={config.brand.defaultTheme}>
+      <Router />
+    </ThemeProvider>
+  );
 }
 
 export default App;

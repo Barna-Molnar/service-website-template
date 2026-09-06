@@ -2,6 +2,11 @@ import { SectionId } from '@/hooks/useScrollToSection';
 import Logo from "./Logo";
 import { config } from "@/config";
 
+const LEGAL_LINKS = [
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
+] as const;
+
 type FooterProps = {
     scrollToSection: (section: SectionId) => void;
 }
@@ -11,7 +16,7 @@ export default function Footer(props: FooterProps) {
 
     return (
         <footer className="bg-muted/30 border-t border-border py-12">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                     <div>
                         <Logo variant="full" className="mb-4" onClick={() => scrollToSection("home")} />
@@ -23,7 +28,7 @@ export default function Footer(props: FooterProps) {
                     <div>
                         <h3 className="font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-2 text-sm">
-                            {config.footer.quickLinks.map((link) => (
+                            {config.navigation.items.map((link) => (
                                 <li key={link.id}>
                                     <a
                                         href={`#${link.id}`}
@@ -44,7 +49,7 @@ export default function Footer(props: FooterProps) {
                     <div>
                         <h3 className="font-semibold mb-4">Legal</h3>
                         <ul className="space-y-2 text-sm">
-                            {config.footer.legalLinks.map((link) => (
+                            {LEGAL_LINKS.map((link) => (
                                 <li key={link.href}>
                                     <a
                                         href={link.href}
