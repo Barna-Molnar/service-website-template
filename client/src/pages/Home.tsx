@@ -8,15 +8,15 @@ import { useScrollToSection } from '@/hooks/useScrollToSection';
 import { config } from "@/config";
 
 export default function Home() {
-    const { refs, scrollToSection } = useScrollToSection();
+    const { getRef, scrollToSection } = useScrollToSection();
 
     return (
         <div className="min-h-screen">
             <Navigation scrollToSection={scrollToSection} />
-            <Hero sectionRef={refs.home} scrollToSection={scrollToSection} />
-            {config.services.enabled && <Services sectionRef={refs.services} />}
-            {config.about.enabled && <About sectionRef={refs.about} />}
-            {config.contact.enabled && <Contact sectionRef={refs.contact} />}
+            <Hero sectionRef={getRef("home")} scrollToSection={scrollToSection} />
+            {config.services.enabled && <Services sectionRef={getRef("services")} />}
+            {config.about.enabled && <About sectionRef={getRef("about")} />}
+            {config.contact.enabled && <Contact sectionRef={getRef("contact")} />}
             <Footer scrollToSection={scrollToSection}/>
         </div>
     );

@@ -34,7 +34,7 @@ export default function Footer(props: FooterProps) {
                                         href={`#${link.id}`}
                                         onClick={(e) => {
                                             e.preventDefault();
-                                            scrollToSection(link.id as SectionId);
+                                            scrollToSection(link.id);
                                         }}
                                         className="text-muted-foreground hover:text-foreground nav-hover-modern pb-1"
                                         data-testid={`link-footer-${link.id}`}

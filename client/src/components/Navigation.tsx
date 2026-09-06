@@ -33,14 +33,14 @@ export default function Navigation(props: NavigationProps) {
                                 className="text-sm font-medium text-foreground nav-hover-modern px-3 py-2 rounded-md"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    onNavigationClick(item.id as SectionId);
+                                    onNavigationClick(item.id);
                                 }}
                             >
                                 {item.label}
                             </a>
                         ))}
                         <Button
-                            onClick={() => onNavigationClick(config.navigation.cta.target as SectionId)}
+                            onClick={() => onNavigationClick(config.navigation.cta.target)}
                             size="sm"
                             className="btn-hover-modern-light"
                             data-testid="button-cta-nav"
@@ -74,7 +74,7 @@ export default function Navigation(props: NavigationProps) {
                                 href={`#${item.id}`}
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    onNavigationClick(item.id as SectionId);
+                                    onNavigationClick(item.id);
                                 }}
                                 className="block w-full text-left text-sm font-medium text-foreground nav-hover-modern px-3 py-2 rounded-md"
                                 data-testid={`link-mobile-${item.id}`}
@@ -83,7 +83,7 @@ export default function Navigation(props: NavigationProps) {
                             </a>
                         ))}
                         <Button
-                            onClick={() => onNavigationClick(config.navigation.cta.target as SectionId)}
+                            onClick={() => onNavigationClick(config.navigation.cta.target)}
                             className="w-full mt-2 btn-hover-modern-light"
                             data-testid="button-cta-nav-mobile"
                         >

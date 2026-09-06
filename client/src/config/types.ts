@@ -121,7 +121,9 @@ export interface ContactConfig {
   title: string;
   subtitle: string;
   phone: string;
+  phoneNote: string;
   email: string;
+  emailNote: string;
   location: string;
   serviceArea: string;
   hours: string[];

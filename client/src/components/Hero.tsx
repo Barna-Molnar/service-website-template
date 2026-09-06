@@ -32,7 +32,7 @@ export default function Hero(props: HeroProps) {
                     <Button
                         variant="default"
                         size="lg"
-                        onClick={() => scrollToSection(config.hero.cta.target as SectionId)}
+                        onClick={() => scrollToSection(config.hero.cta.target)}
                         className="text-base btn-hover-modern"
                         data-testid="button-hero-consultation"
                     >

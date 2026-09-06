@@ -50,9 +50,11 @@ export default function Contact(props: ContactProps) {
                     >
                       {contact.phone}
                     </a>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      Available during business hours
-                    </p>
+                    {contact.phoneNote && (
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {contact.phoneNote}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -67,9 +69,11 @@ export default function Contact(props: ContactProps) {
                     >
                       {contact.email}
                     </a>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      We usually reply within one business day
-                    </p>
+                    {contact.emailNote && (
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {contact.emailNote}
+                      </p>
+                    )}
                   </div>
                 </div>
 

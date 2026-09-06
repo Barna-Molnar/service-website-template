@@ -14,9 +14,10 @@ Do these three things:
 
 2. **Replace the images**
    - Favicon → `client/public/favicon.svg` (set `brand.favicon` to `/favicon.svg`)
-   - Logo / Open Graph image → `client/public/brand/`
+   - Logo → `client/public/brand/`
    - Hero and about photos → `client/public/images/`
-   - Point `brand.logo`, `brand.favicon`, `seo.ogImage`, `hero.backgroundImage`, and `about.image` at those files.
+   - Open Graph image → reuse the hero photo (`/images/hero.webp`) or add `/brand/og-image.jpg`
+   - Point `brand.logo`, `brand.favicon`, `seo.ogImage`, `hero.backgroundImage`, and `about.image` at those files. Leave `seo.ogImage` empty to skip social-image tags.
 
 3. **Install and build**
    ```bash
@@ -51,6 +52,7 @@ In `site.config.ts`:
 
 - `about.enabled` / `services.enabled` / `contact.enabled` — hide a section
 - `contact.highlight.enabled` — hide the highlight card
+- `contact.phoneNote` / `contact.emailNote` — hide a helper line by leaving it empty
 - `features.themeToggle` — hide the dark-mode toggle
 - `brand.logo` — leave empty to show a text wordmark
 

@@ -24,7 +24,7 @@ export const config = {
     ],
     canonicalUrl: "https://example.com",
     locale: "en_US",
-    ogImage: "/brand/og-image.jpg",
+    ogImage: "/images/hero.webp",
     robots: "index, follow",
   },
 
@@ -34,7 +34,7 @@ export const config = {
       googleUrl:
         "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap",
     },
-    colors: themePresets.default, // Swap to themePresets.default or themePresets.warmGold or carSpa
+    colors: themePresets.warmGold, // Swap to themePresets.default or themePresets.warmGold or carSpa
   },
 
   navigation: {
@@ -127,7 +127,9 @@ export const config = {
     title: "Get in Touch",
     subtitle: "Tell us about your project and we will get back to you shortly",
     phone: "+1 (555) 123-4567",
+    phoneNote: "Available during business hours",
     email: "hello@example.com",
+    emailNote: "We usually reply within one business day",
     location: "Your City, Country",
     serviceArea: "Serving clients locally and remotely",
     hours: [

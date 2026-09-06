@@ -60,7 +60,9 @@ function jsonLd() {
 export function buildHeadSnippet() {
   const { brand, seo, theme } = config;
   const canonical = seo.canonicalUrl.replace(/\/$/, "");
-  const ogImage = toAbsoluteUrl(canonical, seo.ogImage);
+  const ogImage = seo.ogImage.trim()
+    ? toAbsoluteUrl(canonical, seo.ogImage)
+    : "";
   const keywords = seo.keywords.join(", ");
 
   return [
@@ -78,14 +80,14 @@ export function buildHeadSnippet() {
     `<meta property="og:url" content="${escapeAttr(canonical)}" />`,
     `<meta property="og:title" content="${escapeAttr(seo.title)}" />`,
     `<meta property="og:description" content="${escapeAttr(seo.description)}" />`,
-    `<meta property="og:image" content="${escapeAttr(ogImage)}" />`,
+    ogImage ? `<meta property="og:image" content="${escapeAttr(ogImage)}" />` : "",
     `<meta property="og:site_name" content="${escapeAttr(brand.name)}" />`,
     `<meta property="og:locale" content="${escapeAttr(seo.locale)}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:url" content="${escapeAttr(canonical)}" />`,
     `<meta name="twitter:title" content="${escapeAttr(seo.title)}" />`,
     `<meta name="twitter:description" content="${escapeAttr(seo.description)}" />`,
-    `<meta name="twitter:image" content="${escapeAttr(ogImage)}" />`,
+    ogImage ? `<meta name="twitter:image" content="${escapeAttr(ogImage)}" />` : "",
     `<script type="application/ld+json">${jsonLd()}</script>`,
     theme.fonts.googleUrl
       ? [
