@@ -7,6 +7,8 @@
   --font-sans: Inter, DM Sans, Open Sans, sans-serif;
   --shadow-hover: 0 10px 25px -5px hsl(220 20% 15% / 0.15), 0 4px 6px -2px hsl(220 20% 15% / 0.05);
   --shadow-card-hover: 0 20px 40px -10px hsl(220 20% 15% / 0.20), 0 8px 16px -4px hsl(220 20% 15% / 0.10);
+  --button-outline: hsl(var(--border));
+  --badge-outline: hsl(var(--border));
 }
 
 .dark {

@@ -34,7 +34,7 @@ export const config = {
       googleUrl:
         "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap",
     },
-    colors: themePresets.warmGold, // Swap to themePresets.default or themePresets.warmGold or carSpa
+    colors: themePresets.carSpa, // Swap to themePresets.default or themePresets.warmGold or carSpa
   },
 
   navigation: {
